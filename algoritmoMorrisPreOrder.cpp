@@ -1,7 +1,7 @@
 /*
-Verifique se o algoritmo está correto ou não.
-EXPLIQUE O PORQUÊ DA SUA RESPOSTA.
-VALENDO 0.5 PT PARA O 1o ALUNO QUE POSTAR A RESPOSTA.
+    Verifique se o algoritmo está correto ou não.
+    EXPLIQUE O PORQUÊ DA SUA RESPOSTA.
+    VALENDO 0.5 PT PARA O 1o ALUNO QUE POSTAR A RESPOSTA.
 */
 
 void MorrisPreorder(){
@@ -29,7 +29,7 @@ void MorrisPreorder(){
 }
 
 /*
-    Resoposta: Sim, pois no laço while para percorrer os nós da árvore, faz uso dos ponteiros 
+    Resoposta: Sim, pois usa o laço while para percorrer os nós da árvore, faz uso dos ponteiros 
     *left e *right de cada nó para se conectar temporariamente e avançar para os pŕoximos nós
     a serem visitados. Dessa forma o percurso pre-order é realizado de maneira eficiente, sem 
     utilizar pilhas ou recursão, e mantendo a estrutura original da árvore.
