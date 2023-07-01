@@ -1,0 +1,23 @@
+        *** AATIVIDADE MORRIS 1 (PERCURSO IN ORDER – LVR) ***
+
+a) Qual é o resultado do percurso In-Order (LVR) na árvore?
+    R: 3 5 7 10 15 20 24
+
+b) Explique quais os passos realizados pelo algoritmo de Morris – Percurso inORDER:
+    1. Inicializa um ponteiro (p) apontando para a raiz da arvore.
+    2. Enquanto (p != NULL) executar passos:
+        2.1. Vrificar (p->left == 0)
+            - Se (NULL), não há mais nós a esquerda para percorrer, portanto, imprima o conteúdo do nó (p) e atualiza (p = p->right) para continuar o algoritmo 
+            - Se (!NULL), seguir para o próximo passo
+        2.2. Fazer ponteiro (tmp) temporário apontar para (p->left)
+        2.3. Enquanto ((tmp->right != 0) e (tmp->right != p)), percorrer os nós à direita de (tmp)
+                obs:  observação: Este passo encontra o nó mais a direita que vai posteriormente apontar para a raiz atual e também restaurar a estrutura da árvore
+        2.4. Verificar (tmp->right)
+            - Se (NULL), significa que não visitamos o nó atual, entao faça (tmp->right) apontar para (p) (raiz atual) e faça (p) ir para seu nó esquerdo
+                obs: etapa responsável por conectar o nó mais a direita ao (current root) que vai ser utilizado para restaurar a estrutura da árvore e encerrar a conexão de (tmp->right) com a "raiz atual".
+            - Se (!NULL), imprimir o conteúdo do nó apontado por (p), então faça (tmp->right = 0) e (p = p->right) 
+                obs: etapa indica que o nó atual já foi percorrido e já está conectado ao "current root", portanto já podemos imprimi-lo, encerrar sua conexão com o "current root" e restaurar a estrutura da árvore
+
+c) Aplique a árvore no algoritmo e confira se o resultado está correto.
+    R: algoritmo executado corretamente.
+
